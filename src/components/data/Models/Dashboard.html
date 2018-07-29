@@ -1,0 +1,883 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="../Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet" />
+    <link href="../Content/css/custom.css" rel="stylesheet">
+
+
+    <link href="../Content/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+
+    <link href="../Content/css/bootstrap-select.css" rel="stylesheet">
+
+    <!-- FullCalendar -->
+    <link href="../Content/css/fullcalendar.min.css" rel="stylesheet">
+    <link href="../Content/css/fullcalendar.print.css" rel="stylesheet" media="print">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="../Content/js/bootstrap.min.js"></script>
+
+    <script src="../Content/js/jquery-slim.min.js"></script>
+    <script src="../Content/js/popper.min.js"></script>
+    <script src="../Content/js/util.js"></script>
+    <script src="../Content/js/dropdown.js"></script>
+    <script src="../Content/js/collapse.js"></script>
+
+
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="../Content/js/calendar.js"></script>
+    <script src="../Content/js/bootstrap-datepicker.min.js"></script>
+
+
+    <script src="../Content/js/daterangepicker.js"></script>
+
+    <script src="../Content/js/bootstrap-select.js"></script>
+
+    <!-- Datatables css -->
+    <link href="../Content/js/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="../Content/js/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="../Content/js/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="../Content/js/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="../Content/js/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+
+
+    <!-- Datatables js -->
+    <script src="../Content/js/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../Content/js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="../Content/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="../Content/js/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+
+    <script src="../Content/js/custom.js"></script>
+</head>
+<body>
+    <div class=container-fluid>
+
+        <div class="sticky-top">
+        <!-- navbar -->
+        <nav id="topNav" class="navbar sticky-top navbar-expand-sm navbar-dark nav-color">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active active-color">
+                            <a class="nav-link" href="#">
+                                <div class="text-center">
+                                    <span color="black" class="fa fa-bars"></span>
+                                    <br />
+                                    <font color="black">Menu</font>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="navbar-brand mx-auto" href="#">3KTERR</a>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item color1">
+                            <a class="nav-link" href="#">
+                                <div class="text-center">
+                                    <span class="fa fa-plus"></span>
+                                    <br />
+                                    <font color="white">New</font>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item color2">
+                            <a class="nav-link" href="#">
+                                <div class="text-center">
+                                    <span class="fa fa-bell"></span>
+                                    <br />
+                                    <font color="white">Notifications</font>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item color3">
+                            <a class="nav-link" href="#">
+                                <div class="text-center">
+                                    <span class="fa fa-clock"></span>
+                                    <br />
+                                    <font color="white">Schedule</font>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- /navbar -->
+
+        <!-- card below navbar -->
+        <div class="card" id="navcard">
+            <div class="card-body card-no-padding-bottom">
+
+                <!-- input for search -->
+                <div class="row float-right">
+                    <div class=text-center>
+                        <div id="" class="form-group pull-right top_search">
+                            <div class="input-group col-md-12">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">Go!</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /input for search -->
+
+                <br />
+
+                <!-- Header with navigations -->
+                <div class=text-center>
+                    <br />
+                    <h5 class="card-title">Welcome to Projects</h5>
+                    <br />
+                    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="dash-tab" data-toggle="tab" href="#dash" role="tab" aria-controls="dash" aria-selected="true">DASHBOARD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="boards-tab" data-toggle="tab" href="#boards" role="tab" aria-controls="boards" aria-selected="false">MEMBERS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="logTimesheet-tab" data-toggle="tab" href="#logTimesheet" role="tab" aria-controls="log timesheet" aria-selected="false">LOG TIMESHEET</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="timesheet-tab" data-toggle="tab" href="#timesheet" role="tab" aria-controls="timesheet" aria-selected="false">TIMESHEET</a>
+                        </li>
+                        <!--li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                        </li-->
+                    </ul>
+                </div>
+                <!-- Header with navigations -->
+
+            </div>
+        </div>
+        <!-- /card below navbar --></div>
+
+        <div class="card card-no-border-top">
+            <div class="card-body">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="dash" role="tabpanel" aria-labelledby="dash-tab">
+                        <br />
+                        <!--div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-btn-md disabled">
+                                        <span class="btn btn-info btn-lg disabled" style="border-radius:0">
+                                            <i class="fa fa-id-badge"></i>
+                                        </span>
+                                    </span>
+                                    <input type="text" class="form-control input-md" style="background-color: transparent; border-bottom-color: black;" placeholder="Name Surname" />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-info btn-lg" type="button" style="background-color: rgb(51,73,94);">
+                                            Project Status
+                                            <i class="divider-vertical"></i>
+                                            <font color="DodgerBlue" size="2px">Active <span class="fa fa-caret-right"></span></font>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div-->
+                        <br />
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="card text-center nav-color">
+                                            <div class="card-body">
+                                                <h3 class="card-title"> <span class="badge badge-dark">15</span></h3>
+                                                <p class="card-text white">Boards Active</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="card text-center color2">
+                                            <div class="card-body">
+                                                <h3 class="card-title"><span class="badge badge-dark">3</span></h3>
+                                                <p class="card-text white">Online Users</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="card text-center color3">
+                                            <div class="card-body">
+                                                <h3 class="card-title white"><span class="fa fa-clock large"></span></h3>
+                                                <p class="card-text white">Capture and Manage My Time</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-body" width="100%">
+                                                <div id='calendar'></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-body" width="100%">
+                                                <p class="card-text">Contact Project Owner</p>
+                                                <p class="card-text mail-color">owner@3kterr.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--tab-pane boards-->
+                    <div class="tab-pane fade" id="boards" role="tabpanel" aria-labelledby="boards-tab">
+                        <br />
+                       <div class="container">
+                           <div class="row">
+                               <button class="btn btn-info btn-md" type="button" data-toggle="modal" data-target="#InviteToProject">
+                                   <i class="fa fa-plus"></i>  Invite people to this project...
+                               </button>
+                           </div>
+                           <br />
+                           <div class="row">
+                               <table class="table text-center">
+                                   <thead class="thead-dark">
+                                       <tr>
+                                           <th scope="col">Remove</th>
+                                           <th scope="col">User</th>
+                                           <th scope="col">Role</th>
+                                           <th scope="col">Email</th>
+                                       </tr>
+                                   </thead>
+                                   <tbody>
+                                       <tr>
+                                           <th scope="row"><button class="btn btn-default"><i class="fa fa-times"></i></button></th>
+                                           <td>Name Surname</td>
+                                           <td>Administrator</td>
+                                           <td>admin1@kelatoni.com</td>
+                                       </tr>
+                                       <tr>
+                                           <th scope="row"><button class="btn btn-default"><i class="fa fa-times"></i></button></th>
+                                           <td>Name Surname</td>
+                                           <td>Development Team</td>
+                                           <td>developer1@kelatoni.com</td>
+                                       </tr>
+                                       <tr>
+                                           <th scope="row"><button class="btn btn-default"><i class="fa fa-times"></i></button></th>
+                                           <td>Name Surname</td>
+                                           <td>Administrator</td>
+                                           <td>admin2@kelatoni.com</td>
+                                       </tr>
+                                   </tbody>
+                               </table>
+                           </div>
+
+                       </div>
+                        <br />
+
+
+
+                    </div>
+                    <!-- /tab-pane boards-->
+
+                    <!--tab-pane log timesheet-->
+                    <div class="tab-pane fade" id="logTimesheet" role="tabpanel" aria-labelledby="members-tab">
+                        <div class="card-body">
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active">
+                                    <br />
+
+
+
+
+                                    <div class="row justify-content-center nav nav-tabs" role="tablist">
+                                        <div class="col-md-10">
+
+                                            <div class="hr-line">
+                                                <span class="hr-text">
+                                                    Select Project <!--Padding is optional-->
+                                                </span>
+                                            </div>
+                                            <br />
+
+
+                                            <div class="row  justify-content-center">
+                                                <select id="first-disabled" class="selectpicker form-control" data-hide-disabled="true" data-live-search="true">
+                                                    <option>Apple</option>
+                                                    <option>Orange</option>
+                                                    <option>Corn</option>
+                                                    <option>Carrot</option>
+                                                </select>
+                                            </div>
+
+
+                                            <br />
+
+
+                                            <div class="hr-line">
+                                                <span class="hr-text">
+                                                    Choose TASK to start tracking <!--Padding is optional-->
+                                                </span>
+                                            </div>
+                                            <br />
+
+                                            <div class="row">
+
+                                                <a href="#" class="col-sm-4">
+                                                    <div class="card text-center color3">
+                                                        <div class="card-body">
+                                                            <p class="card-text white">Hello Task 2</p>
+                                                            <br />
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                                <a href="#" class="col-sm-4">
+                                                    <div class="card text-center color3">
+                                                        <div class="card-body">
+                                                            <p class="card-text white">Hello Task 3</p>
+                                                            <br />
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /tab-pane log timesheet-->
+
+
+                    <!--tab-pane timesheet-->
+                    <div class="tab-pane fade" id="timesheet" role="tabpanel" aria-labelledby="timesheet-tab">
+                        <div class="container">
+                            <div class="row tile_count">
+                                <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                                    <span class="count_top"><i class="fa fa-clock"></i> Total Hours</span>
+                                    <div class="count">Today</div>
+                                    <span class="count_bottom"><span class="green">0 </span></span>
+                                </div>
+                                <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                                    <span class="count_top"><i class="fa fa-clock"></i> Total Hours</span>
+                                    <div class="count">This Week</div>
+                                    <span class="count_bottom"><span class="green">0 </span></span>
+                                </div>
+                                <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                                    <span class="count_top"><i class="fa fa-clock"></i> Total Hours</span>
+                                    <div class="count">This Month</div>
+                                    <span class="count_bottom"><span class="green">0 </span></span>
+                                </div>
+                                <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                                    <span class="count_top"><i class="fa fa-clock"></i> Total Hours</span>
+                                    <div class="count">This Year</div>
+                                    <span class="count_bottom"><span class="green">0 </span></span>
+                                </div>
+
+                                <div class="col-md-2 tile_stats_count">
+                                        <div class="input input-group date" data-provide="datepicker">
+                                            <span class="input-group-btn input-group-addon">
+                                                <button class="btn btn-default btn-md" type="button">
+                                                    <i class="fa fa-calendar"></i>
+                                                </button>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="Show Calendar">
+                                        </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Filter By
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <button class="dropdown-item" type="button">Date</button>
+                                            <button class="dropdown-item" type="button">Project</button>
+                                            <button class="dropdown-item" type="button">User</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br/>
+
+                            <div class="row">
+                                <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">Project Code</th>
+                                            <th scope="col">Project Name</th>
+                                            <th scope="col">Mon</th>
+                                            <th scope="col">Tue</th>
+                                            <th scope="col">Wed</th>
+                                            <th scope="col">Thu</th>
+                                            <th scope="col">Fri</th>
+                                            <th scope="col">Sat</th>
+                                            <th scope="col">Sun</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">C2018/10/10</th>
+                                            <td>Maluleke Project</td>
+                                            <td>0.0</td>
+                                            <td>0.0</td>
+                                            <td>0.0</td>
+                                            <td>0.0</td>
+                                            <td>0.0</td>
+                                            <td>0.0</td>
+                                            <td>0.0</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">C2018/10/10</th>
+                                            <td>Other Project</td>
+                                            <td>0.0</td>
+                                            <td>0.0</td>
+                                            <td>0.0</td>
+                                            <td>0.0</td>
+                                            <td>0.0</td>
+                                            <td>0.0</td>
+                                            <td>0.0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                            <br />
+                        </div>
+                    </div>
+                    <!--/tab-pane timesheet-->
+
+
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        ...contact
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- calendar modal -->
+        <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">New Calendar Entry</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="testmodal" style="padding: 5px 20px;">
+                            <form id="antoform" class="form-horizontal calender" role="form">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Title</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="title" name="title">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Description</label>
+                                    <div class="col-sm-9">
+                                        <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary antosubmit">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel2">Edit Calendar Entry</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="testmodal2" style="padding: 5px 20px;">
+                            <form id="antoform2" class="form-horizontal calender" role="form">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Title</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="title2" name="title2">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Description</label>
+                                    <div class="col-sm-9">
+                                        <textarea class="form-control" style="height:55px;" id="descr2" name="descr"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary antosubmit2">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div id="InviteToProject" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="width:600px">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel2">Add Employees To Project</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="testmodal2" style="padding: 5px 20px;">
+
+
+                            <div class="container">
+                                <div class="row justify-content-md-center">
+                                    <div class="">
+                                        <div class="k_content">
+                                            <br />
+                                            <table id="datatable-checkboxDash" class="table bulk_action">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </th>
+                                                        <th>Names</th>
+                                                        <th>Position</th>
+                                                        <th>Email</th>
+                                                    </tr>
+                                                </thead>
+
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Tiger Nixon</td>
+                                                        <td>System Architect</td>
+                                                        <td>Edinburgh@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Garrett Winters</td>
+                                                        <td>Accountant</td>
+                                                        <td>Tokyo@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Ashton Cox</td>
+                                                        <td>Junior Technical Author</td>
+                                                        <td>San@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Cedric Kelly</td>
+                                                        <td>Senior Javascript Developer</td>
+                                                        <td>Edinburgh@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Airi Satou</td>
+                                                        <td>Accountant</td>
+                                                        <td>demo@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Brielle Williamson</td>
+                                                        <td>Integration Specialist</td>
+                                                        <td>something@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Herrod Chandler</td>
+                                                        <td>Sales Assistant</td>
+                                                        <td>new@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Rhona Davidson</td>
+                                                        <td>Integration Specialist</td>
+                                                        <td>null@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Colleen Hurst</td>
+                                                        <td>Javascript Developer</td>
+                                                        <td>col@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Sonya Frost</td>
+                                                        <td>Software Engineer</td>
+                                                        <td>frost@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Jena Gaines</td>
+                                                        <td>Office Manager</td>
+                                                        <td>jg@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Quinn Flynn</td>
+                                                        <td>Support Lead</td>
+                                                        <td>qf@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Charde Marshall</td>
+                                                        <td>Regional Director</td>
+                                                        <td>c.marshall@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Haley Kennedy</td>
+                                                        <td>Senior Marketing Designer</td>
+                                                        <td>h.k@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Tatyana Fitzpatrick</td>
+                                                        <td>Regional Director</td>
+                                                        <td>tat@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Michael Silva</td>
+                                                        <td>Marketing Designer</td>
+                                                        <td>m.silva@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Paul Byrd</td>
+                                                        <td>Chief Financial Officer (CFO)</td>
+                                                        <td>p.br@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Gloria Little</td>
+                                                        <td>Systems Administrator</td>
+                                                        <td>little@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Bradley Greer</td>
+                                                        <td>Software Engineer</td>
+                                                        <td>bradley@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Dai Rios</td>
+                                                        <td>Personnel Lead</td>
+                                                        <td>mail@gmail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Jenette Caldwell</td>
+                                                        <td>Development Lead</td>
+                                                        <td>jc@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Yuri Berry</td>
+                                                        <td>Chief Marketing Officer (CMO)</td>
+                                                        <td>y.berry@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Caesar Vance</td>
+                                                        <td>Pre-Sales Support</td>
+                                                        <td>caesar@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Doris Wilder</td>
+                                                        <td>Sales Assistant</td>
+                                                        <td>Sidney@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Angelica Ramos</td>
+                                                        <td>Chief Executive Officer (CEO)</td>
+                                                        <td>ramos.ang@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Gavin Joyce</td>
+                                                        <td>Developer</td>
+                                                        <td>Edinburgh@gmail.com/
+                                                        <td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Jennifer Chang</td>
+                                                        <td>Regional Director</td>
+                                                        <td>chang@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Donna Snider</td>
+                                                        <td>Customer Support</td>
+                                                        <td>don@mail.com</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="ln_solid"></div>
+
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary antosubmit2">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
+        <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
+        <!-- /calendar modal -->
+        <!-- FullCalendar -->
+        <script src="../Content/js/moment.min.js"></script>
+        <script src="../Content/js/fullcalendar.min.js"></script>
+
+        <script>
+  $(document).ready(function () {
+    var mySelect = $('#first-disabled2');
+
+    $('#special').on('click', function () {
+      mySelect.find('option:selected').prop('disabled', true);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#special2').on('click', function () {
+      mySelect.find('option:disabled').prop('disabled', false);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#basic2').selectpicker({
+      liveSearch: true,
+      maxOptions: 1
+    });
+  });
+        </script>
+        <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+        </script>
+
+</body>
+</html>

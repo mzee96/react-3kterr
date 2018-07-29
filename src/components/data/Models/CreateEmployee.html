@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Create Employee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="../Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet" />
+    <link href="../Content/css/custom.css" rel="stylesheet">
+    <link href="../Content/css/calendar.css" rel="stylesheet">
+    <!-- FullCalendar -->
+    <link href="../Content/css/fullcalendar.min.css" rel="stylesheet">
+    <link href="../Content/css/fullcalendar.print.css" rel="stylesheet" media="print">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../Content/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="../Content/js/calendar.js"></script>
+</head>
+<body>
+    <div class=container-fluid>
+        <!-- navbar -->
+        <nav id="topNav" class="navbar sticky-top navbar-expand-sm navbar-dark nav-color">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active active-color">
+                            <a class="nav-link" href="#">
+                                <div class="text-center">
+                                    <span color="black" class="fa fa-bars"></span>
+                                    <br />
+                                    <font color="black">Menu</font>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="navbar-brand mx-auto" href="#">3KTERR</a>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item color1">
+                            <a class="nav-link" href="#">
+                                <div class="text-center">
+                                    <span class="fa fa-plus"></span>
+                                    <br />
+                                    <font color="white">New</font>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item color2">
+                            <a class="nav-link" href="#">
+                                <div class="text-center">
+                                    <span class="fa fa-bell"></span>
+                                    <br />
+                                    <font color="white">Notifications</font>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item color3">
+                            <a class="nav-link" href="#">
+                                <div class="text-center">
+                                    <span class="fa fa-clock"></span>
+                                    <br />
+                                    <font color="white">Schedule</font>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- /navbar -->
+        <!-- card below navbar -->
+        <div class="card" id="navcard">
+            <div class="card-body card-no-padding-bottom">
+
+                <div class="page-title">
+                    <div class="text-center">
+                        <h3>Add New Employee</h3>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- /card below navbar -->
+        <div class="card card-no-border-top">
+            <div class="card-body">
+                <div class="k_content">
+                    <form class="form-horizontal form-label-left">
+                        <div class="form-group row">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">First Name</label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="text" class="form-control custom-input col-md-9 col-sm-9" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Surname</label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="text" class="form-control custom-input col-md-9 col-sm-9" placeholder="Surname">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Email</label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="text" class="form-control custom-input col-md-9 col-sm-9" placeholder="user@mail.com">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Username</label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="text" class="form-control custom-input col-md-9 col-sm-9" placeholder="username">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">ID/Passport Number</label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="text" class="form-control custom-input col-md-9 col-sm-9" placeholder="9712016531065">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Password</label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="password" class="form-control custom-input col-md-9 col-sm-9" placeholder="**********">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Phone</label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="text" class="form-control custom-input col-md-9 col-sm-9" placeholder="0813124323"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Employee Type</label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <select class="form-control custom-input col-md-9 col-sm-9">
+                                    <option>Choose option</option>
+                                    <option>Option one</option>
+                                    <option>Option two</option>
+                                    <option>Option three</option>
+                                    <option>Option four</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Role</label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <select class="form-control custom-input col-md-9 col-sm-9">
+                                    <option>Choose option</option>
+                                    <option>Option one</option>
+                                    <option>Option two</option>
+                                    <option>Option three</option>
+                                    <option>Option four</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Access Level</label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <select class="form-control custom-input col-md-9 col-sm-9">
+                                    <option>Choose option</option>
+                                    <option>Option one</option>
+                                    <option>Option two</option>
+                                    <option>Option three</option>
+                                    <option>Option four</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="ln_solid"></div>
+                        <div class="form-group row">
+                            <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                                <button type="button" class="btn btn-primary">Cancel</button>
+                                <button type="reset" class="btn btn-primary">Reset</button>
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

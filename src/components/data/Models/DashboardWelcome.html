@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="../Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet" />
+    <link href="../Content/css/custom.css" rel="stylesheet">
+    <link href="../Content/css/calendar.css" rel="stylesheet">
+    <!-- FullCalendar -->
+    <link href="../Content/css/fullcalendar.min.css" rel="stylesheet">
+    <link href="../Content/css/fullcalendar.print.css" rel="stylesheet" media="print">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../Content/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="../Content/js/calendar.js"></script>
+</head>
+<body>
+    <div class=container-fluid>
+
+        <div class="sticky-top">
+            <!-- navbar -->
+            <nav id="topNav" class="navbar sticky-top navbar-expand-sm navbar-dark nav-color">
+                <div class="container-fluid">
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active active-color">
+                                <a class="nav-link" href="#">
+                                    <div class="text-center">
+                                        <span color="black" class="fa fa-bars"></span>
+                                        <br />
+                                        <font color="black">Menu</font>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="navbar-brand mx-auto" href="#">3KTERR</a>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item color1">
+                                <a class="nav-link" href="#">
+                                    <div class="text-center">
+                                        <span class="fa fa-plus"></span>
+                                        <br />
+                                        <font color="white">New</font>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item color2">
+                                <a class="nav-link" href="#">
+                                    <div class="text-center">
+                                        <span class="fa fa-bell"></span>
+                                        <br />
+                                        <font color="white">Notifications</font>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item color3">
+                                <a class="nav-link" href="#">
+                                    <div class="text-center">
+                                        <span class="fa fa-clock"></span>
+                                        <br />
+                                        <font color="white">Schedule</font>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- /navbar -->
+            <!-- card below navbar -->
+            <div class="card" id="navcard">
+                <div class="card-body card-no-padding-bottom">
+
+                    <!-- input for search -->
+                    <div class="row float-right">
+                        <div class=text-center>
+                            <div id="" class="form-group pull-right top_search">
+                                <div class="input-group col-md-12">
+                                        <input type="text" class="form-control" placeholder="Search...">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">Go!</button>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /input for search -->
+                    <br />
+                    <!-- Header with navigations -->
+                    <div class=text-center>
+                        <br />
+                        <h5 class="card-title">Welcome to Projects</h5>
+                        <br />
+
+                    </div>
+                    <!-- Header with navigations -->
+                </div>
+            </div>
+            <!-- /card below navbar -->
+        </div>
+
+
+
+        <div class="card card-no-border-top">
+            <div class="card-body">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active">
+                        <br />
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+
+                                <div class="hr-line">
+                                    <span class="hr-text">
+                                        URGENT PROJECTS <!--Padding is optional-->
+                                    </span>
+                                </div>
+                                <br/>
+
+                                    <div class="row">
+                                        <a href="Dashboard.html" class="col-sm-4">
+                                            <div class="card text-center nav-color">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"> <span class="badge badge-dark">15</span></h4>
+                                                    <p class="card-text white">Maluleke Project</p>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <br />
+
+
+                                <div class="hr-line">
+                                    <span class="hr-text">
+                                        OTHER PROJECTS <!--Padding is optional-->
+                                    </span>
+                                </div>
+                                <br />
+
+                                    <div class="row">
+                                        <a href="#" class="col-sm-4">
+                                            <div class="card text-center color3">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"> <span class="badge badge-dark">0</span></h4>
+                                                    <p class="card-text white">Hello Project 1</p>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <a href="#" class="col-sm-4">
+                                            <div class="card text-center color3">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"> <span class="badge badge-dark">0</span></h4>
+                                                    <p class="card-text white">Hello Project 2</p>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <a href="#" class="col-sm-4">
+                                            <div class="card text-center color3">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"> <span class="badge badge-dark">0</span></h4>
+                                                    <p class="card-text white">Hello Project 3</p>
+                                                    <br/>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</body>
+</html>

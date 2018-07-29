@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Create Team</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet" />
+    <link href="../Content/css/custom.css" rel="stylesheet">
+    <link href="../Content/css/calendar.css" rel="stylesheet">
+    <!-- FullCalendar -->
+    <link href="../Content/css/fullcalendar.min.css" rel="stylesheet">
+    <link href="../Content/css/fullcalendar.print.css" rel="stylesheet" media="print">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../Content/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="../Content/js/calendar.js"></script>
+
+    <!-- Datatables css -->
+    <link href="../Content/js/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="../Content/js/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="../Content/js/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="../Content/js/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="../Content/js/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+
+
+    <!-- Datatables js -->
+    <script src="../Content/js/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../Content/js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="../Content/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="../Content/js/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+
+    <script src="../Content/js/custom.js"></script>
+
+</head>
+<body>
+    <div class=container-fluid>
+        <!-- navbar -->
+        <nav id="topNav" class="navbar sticky-top navbar-expand-sm navbar-dark nav-color">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active active-color">
+                            <a class="nav-link" href="#">
+                                <div class="text-center">
+                                    <span color="black" class="fa fa-bars"></span>
+                                    <br />
+                                    <font color="black">Menu</font>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="navbar-brand mx-auto" href="#">3KTERR</a>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item color1">
+                            <a class="nav-link" href="#">
+                                <div class="text-center">
+                                    <span class="fa fa-plus"></span>
+                                    <br />
+                                    <font color="white">New</font>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item color2">
+                            <a class="nav-link" href="#">
+                                <div class="text-center">
+                                    <span class="fa fa-bell"></span>
+                                    <br />
+                                    <font color="white">Notifications</font>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item color3">
+                            <a class="nav-link" href="#">
+                                <div class="text-center">
+                                    <span class="fa fa-clock"></span>
+                                    <br />
+                                    <font color="white">Schedule</font>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- /navbar -->
+        <!-- card below navbar -->
+        <div class="card" id="navcard">
+            <div class="card-body card-no-padding-bottom">
+                <div class="page-title">
+                    <div class="text-center">
+                        <h3>Create New Team</h3>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- /card below navbar -->
+
+        <div class="card card-no-border-top">
+            <div class="card-body">
+                <div class="container">
+                    <div class="k_content">
+                        <form class="form-horizontal form-label-left">
+                            <div class="form-group row">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Team Name</label>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                    <input type="text" class="form-control custom-input col-md-9 col-sm-9" placeholder="Team Name">
+                                </div>
+                            </div>
+
+                            <div class="container">
+                                <div class="row justify-content-md-center">
+                                    <div class="col-md-8">
+                                        <div class="k_content">
+                                            <br />
+                                            <table id="datatable-checkbox" class="table bulk_action">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </th>
+                                                        <th>Names</th>
+                                                        <th>Position</th>
+                                                        <th>Email</th>
+                                                    </tr>
+                                                </thead>
+
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Tiger Nixon</td>
+                                                        <td>System Architect</td>
+                                                        <td>Edinburgh@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Garrett Winters</td>
+                                                        <td>Accountant</td>
+                                                        <td>Tokyo@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Ashton Cox</td>
+                                                        <td>Junior Technical Author</td>
+                                                        <td>San@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Cedric Kelly</td>
+                                                        <td>Senior Javascript Developer</td>
+                                                        <td>Edinburgh@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Airi Satou</td>
+                                                        <td>Accountant</td>
+                                                        <td>demo@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Brielle Williamson</td>
+                                                        <td>Integration Specialist</td>
+                                                        <td>something@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Herrod Chandler</td>
+                                                        <td>Sales Assistant</td>
+                                                        <td>new@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Rhona Davidson</td>
+                                                        <td>Integration Specialist</td>
+                                                        <td>null@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Colleen Hurst</td>
+                                                        <td>Javascript Developer</td>
+                                                        <td>col@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Sonya Frost</td>
+                                                        <td>Software Engineer</td>
+                                                        <td>frost@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Jena Gaines</td>
+                                                        <td>Office Manager</td>
+                                                        <td>jg@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Quinn Flynn</td>
+                                                        <td>Support Lead</td>
+                                                        <td>qf@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Charde Marshall</td>
+                                                        <td>Regional Director</td>
+                                                        <td>c.marshall@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Haley Kennedy</td>
+                                                        <td>Senior Marketing Designer</td>
+                                                        <td>h.k@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Tatyana Fitzpatrick</td>
+                                                        <td>Regional Director</td>
+                                                        <td>tat@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Michael Silva</td>
+                                                        <td>Marketing Designer</td>
+                                                        <td>m.silva@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Paul Byrd</td>
+                                                        <td>Chief Financial Officer (CFO)</td>
+                                                        <td>p.br@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Gloria Little</td>
+                                                        <td>Systems Administrator</td>
+                                                        <td>little@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Bradley Greer</td>
+                                                        <td>Software Engineer</td>
+                                                        <td>bradley@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Dai Rios</td>
+                                                        <td>Personnel Lead</td>
+                                                        <td>mail@gmail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Jenette Caldwell</td>
+                                                        <td>Development Lead</td>
+                                                        <td>jc@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Yuri Berry</td>
+                                                        <td>Chief Marketing Officer (CMO)</td>
+                                                        <td>y.berry@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Caesar Vance</td>
+                                                        <td>Pre-Sales Support</td>
+                                                        <td>caesar@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Doris Wilder</td>
+                                                        <td>Sales Assistant</td>
+                                                        <td>Sidney@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Angelica Ramos</td>
+                                                        <td>Chief Executive Officer (CEO)</td>
+                                                        <td>ramos.ang@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Gavin Joyce</td>
+                                                        <td>Developer</td>
+                                                        <td>Edinburgh@gmail.com/
+                                                        <td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Jennifer Chang</td>
+                                                        <td>Regional Director</td>
+                                                        <td>chang@mail.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                        <th><input type="checkbox" id="check-all" class="flat"></th>
+                                                        </td>
+                                                        <td>Donna Snider</td>
+                                                        <td>Customer Support</td>
+                                                        <td>don@mail.com</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="ln_solid"></div>
+                            <div class="row">
+                                <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                                    <button type="button" class="btn btn-primary">Cancel</button>
+                                    <button type="reset" class="btn btn-primary">Reset</button>
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</body>
+</html>

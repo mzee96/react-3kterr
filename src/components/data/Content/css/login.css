@@ -1,0 +1,191 @@
+﻿body, html {
+    height: 100%;
+    background-repeat: no-repeat;
+    background: rgb(59,73,94);
+    /*background: -moz-radial-gradient(center, ellipse cover, rgba(185,210,224,1) 0%, rgba(187,214,228,1) 0%, rgba(186,211,225,1) 15%, rgba(186,211,225,1) 38%, rgba(169,199,215,1) 68%, rgba(169,199,215,1) 68%, rgba(169,199,215,1) 82%, rgba(158,191,208,1) 100%); /* FF3.6-15 */
+    /*background: -webkit-radial-gradient(center, ellipse cover, rgba(185,210,224,1) 0%,rgba(187,214,228,1) 0%,rgba(186,211,225,1) 15%,rgba(186,211,225,1) 38%,rgba(169,199,215,1) 68%,rgba(169,199,215,1) 68%,rgba(169,199,215,1) 82%,rgba(158,191,208,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    /*background: radial-gradient(ellipse at center, rgba(185,210,224,1) 0%,rgba(187,214,228,1) 0%,rgba(186,211,225,1) 15%,rgba(186,211,225,1) 38%,rgba(169,199,215,1) 68%,rgba(169,199,215,1) 68%,rgba(169,199,215,1) 82%,rgba(158,191,208,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b9d2e0', endColorstr='#9ebfd0',GradientType=1 ) /* IE6-9 fallback on horizontal gradient */
+}
+
+.bg_colorL{
+    background-repeat: no-repeat;
+    background: rgb(59,73,94);
+}
+
+.login_boxL {
+    background: #f7f7f7;
+    border: 3px solid #F4F4F4;
+    padding-left: 15px;
+    margin-bottom: 25px
+}
+
+.input_titleL {
+    color: rgba(164, 164, 164, 0.9);
+    padding-left: 3px;
+    margin-bottom: 2px
+}
+
+hr {
+    width: 100%
+}
+
+.welcomeL {
+    font-family: "myriad-pro",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    margin-top: 50px
+}
+
+.login_titleL {
+    font-family: "myriad-pro",sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    color: rgba(164, 164, 164, 0.5)
+}
+
+.card-containerL.cardL {
+    max-width: 350px
+}
+
+.btnL {
+    font-weight: 100;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+    border: none;
+    border-radius: 1;
+    background: rgb(92, 189, 157);
+    height: 36px;
+    margin-bottom: 10px
+
+}
+
+/*
+ * Card component
+ */
+.cardL {
+    /*background-color: rgba(255, 255, 255, 0);*/
+    /* just in case there no content*/
+    padding: 1px 25px 30px;
+    margin: 0 auto;
+    margin-top: 15%x;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border: 1px solid rgba(0,0,0,.125);
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3)
+}
+
+.profile-img-cardL {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%
+}
+
+/*
+ * Form styles
+ */
+.profile-name-cardL {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em
+}
+
+.reauth-emailL {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.form-signinL input[type=email],
+.form-signinL input[type=password],
+.form-signinL input[type=text] {
+    direction: ltr;
+    height: 36px;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    -moz-border-radius: 0.5px;
+    -webkit-border-radius: 0.5px;
+    border: 0.5px solid white;
+    border-radius: 3px
+}
+
+
+
+
+.form-signinL input[type=email],
+.form-signinL input[type=password],
+.form-signinL input[type=text],
+.form-signinL button {
+    width: 100%;
+    display: block;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.form-signinL .form-controlL:focus {
+    border-color: rgb(92, 189, 157);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(92, 189, 157);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(92, 189, 157)
+}
+
+.btnL.btn-signinL {
+    /*background-color: #4d90fe; */
+    background-color: rgb(92, 189, 157);
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s
+}
+
+    .btnL.btn-signinL:hover,
+    .btnL.btn-signinL:active,
+    .btnL.btn-signinL:focus {
+        background-color: rgb(92, 189, 157)
+    }
+
+.forgot-passwordL {
+    color: rgb(92, 189, 157)
+}
+
+    .forgot-passwordL:hover,
+    .forgot-passwordL:active,
+    .forgot-passwordL:focus {
+        color: rgb(12, 97, 33)
+    }
